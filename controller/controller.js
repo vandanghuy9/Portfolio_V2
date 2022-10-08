@@ -1,5 +1,8 @@
 const db = require('../dbQuery');
 const express = require('express');
+const getHomePage = (req,res)=>{
+    res.sendFile(__dirname + '../views/')
+}
 const messageHandle = function(req,res){
     const infor = req.body;
     if (!infor.name || !infor.email){

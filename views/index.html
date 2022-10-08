@@ -11,10 +11,11 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
     </noscript>
-    <link href="css/font-awesome/css/all.min.css?ver=1.2.1" rel="stylesheet">
-    <link href="css/mdb.min.css?ver=1.2.1" rel="stylesheet">
-    <link href="css/aos.css?ver=1.2.1" rel="stylesheet">
-    <link href="css/main.css?ver=1.2.1" rel="stylesheet">
+    <link href="css/font-awesome/css/all.min.css" rel="stylesheet"> 
+    <!-- Since we use static /public, don't need public/ in url -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <noscript>
       <style type="text/css">
         [data-aos] {
@@ -23,7 +24,7 @@
         }
       </style>
     </noscript>
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script >
       function validateForm(){
         const captcha_response = grecaptcha.getResponse();
@@ -329,7 +330,7 @@
         </div>
       </div>
     </footer>
-    <script src="scripts/mdb.min.js?ver=1.2.1"></script>
+    <script src="scripts/mdb.min.js"></script>
     <script src="scripts/aos.js?ver=1.2.1"></script>
     
     <script
@@ -365,6 +366,6 @@
               }
             });
     </script>
-    <script src="scripts/main.js?ver=1.2.1"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

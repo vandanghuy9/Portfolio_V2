@@ -7,7 +7,9 @@ const port = 5000;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('./public'));
-
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname + "/views/index.html");
+});
 app.use('/api/message',message); // provide the base api
 
 app.all('*',(req,res)=>{
