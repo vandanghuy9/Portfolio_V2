@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql": "^2.18.1"
+  },
+  "name": "git-repository",
+  "description": "Directory Structure\r -------------------\r css\\              - Stylesheets CSS files for the template.\r images\\           - Images used in template.\r scripts\\          - JavaScript used in the template.\r styles\\           - SCSS source files for stylesheets CSS. Available in Purchased versions only.\r favicon.ico       - Favicon placeholder provided for the template.\r index.html        - Main HTML page to open the template in browser.\r *.html            - Additional HTML pages (if any).\r LICENSE-*.txt     - License file as per your downloaded variant.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
