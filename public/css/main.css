@@ -1,9 +1,26 @@
 .is-hidden{
   display:none;
 }
-.is-visible{
-  display: contents;
+.is-visible {  
+  display: inline-flex;
   color: #38f4d1;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin:0 auto;
+  letter-spacing: .15em;
+  animation: 
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from {width: 0}
+  to {width:15%}
+}
+
+@keyframes blink-caret {
+  from, to {border-color: transparent}
+  50% {border-color: #38f4d1;}
 }
 /* Timeline custom component */
 .timeline-card {
@@ -67,10 +84,12 @@ html, body {
   opacity: 1; } */
 .active,.nav-link:active{
   color: rgb(41, 26, 26);
-  text-decoration: underline;
+  background-color: #E6E9ED;
+  padding: 0 10px;
   } 
 .nav-item + .nav-item {
-  margin-left: 1rem; }
+  margin-left: 1rem; 
+}
 
 .cover {
   height: 500px; }
@@ -90,7 +109,11 @@ html, body {
 
 .text-teal {
   color: var(--bs-teal); }
-
+.address{
+  border: 2px solid #cfd0d3;
+  padding-bottom: 0;
+  width: 328px;
+}
 footer a:not(.nav-link) {
   color: inherit;
   border-bottom: 1px dashed;
@@ -115,7 +138,16 @@ footer a:not(.nav-link) {
   .portfolio-reverse {
     flex-direction: column-reverse; }
   .portfolio-reverse .text-end {
-    text-align: start !important; } }
+    text-align: start !important; } 
+
+    @keyframes typing {
+      from {width: 0}
+      to {width:25%}
+    }
+    .address{
+      margin-bottom: 5px;
+    }
+}
 
 @media print {
   [data-aos] {

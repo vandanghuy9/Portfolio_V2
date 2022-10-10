@@ -5,7 +5,9 @@ AOS.init({
 });
 
 // Add your javascript here
-
+const message = ["University Student","Web Developer"];
+let index =0;
+let characterIndex =0;
 const getList = document.querySelector('#menu-list');
 const elements = getList.querySelectorAll('.nav-link');
 console.log(elements[0]);
@@ -20,16 +22,31 @@ for (let i=0;i<elements.length;i++){
   });
 }
 
-const setPushElement=setInterval(function(){
-  const getJob = document.getElementsByClassName("job");
-  const isHidden = "is-hidden";
-  
-  if (getJob[0].className==="job is-hidden"){
-    getJob[0].className=getJob[0].className.replace(" is-hidden"," is-visible");
-    getJob[1].className=getJob[1].className.replace(" is-visible"," is-hidden");
+function delay(){
+  characterIndex =0;
+  index++;
+  document.querySelector('.is-visible').innerHTML = '';
+  setTimeout(setPushElement,100); //run 2st message
+}
+function setPushElement(){
+  if (index < message.length){
+    if (characterIndex < message[index].length){
+      document.querySelector('.is-visible').innerHTML += message[index].charAt(characterIndex);
+      characterIndex++;
+      setTimeout(setPushElement,200); // read the 1st message
+    }
+    else{ // if finish 1st message 
+      setTimeout(delay,1000); // wait for 2st message
+    }
   }
-  else if (getJob[0].className==="job is-visible"){
-    getJob[0].className=getJob[0].className.replace(" is-visible"," is-hidden");
-    getJob[1].className=getJob[1].className.replace(" is-hidden"," is-visible");
+  else{ // after finish 2 messages
+    index = 0;
+    characterIndex =0; //restore initiated value
+    setTimeout(setPushElement,200);
   }
-},3000);
+}
+
+
+setInterval(setPushElement(),5000);
+
+
